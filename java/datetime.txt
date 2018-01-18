@@ -1,0 +1,22 @@
+java.time <- Java 8
+    temporal
+        TemporalAccessor interface
+            LocalDateTime
+            LocalTime
+            LocalDate
+    Period
+        quantity in terms of years, months, days
+    Duration
+        quantity in terms of hour, minute, second
+
+LocalDate, LocalDateTime, LocalTime
+    contain no zone information
+    private constructors
+    immutable
+    use with(...) and TemporalAdjusters interface to change into new object
+
+calendar
+    ISO-8601
+
+ISO_DATE
+    YYYY-MM-DD

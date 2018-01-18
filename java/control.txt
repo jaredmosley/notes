@@ -1,0 +1,67 @@
+compiler only checks final values when determining flow of control
+
+switch
+    switch variable
+        can not use
+            boolean, long, double
+        can use String, byte, char, short, int, and Enum
+            Byte, Character, Short, Integer also allowed
+    case label
+        must be assignable to switch variable
+        should be COMPILE TIME CONSTANTS
+        must be unique
+            default label
+            must be at the bottom if there
+            at most one
+    structure
+        byte b = 10;
+        switch(b){
+            case 20: //some code;
+            case 30: //some code;
+            default: //default code;
+        }
+
+synchronized
+    can not be applied to class
+    can be applied to methods or blocks
+
+break
+    without label
+        switch, while, do, or for
+
+continue
+    without label
+        while, do, or for
+
+--i
+    done before command
+i++
+    done after the command
+
+assignment inside statements are evaluated before execution
+    String str1 = "one";
+    String str2 = "two";
+    System.out.println(str1.equals(str1=str2)); //prints false
+
+precedence
+    = has least precedence of all operators
+    dot operator has more precedence than cast operator
+        ex.
+            ((Integer) t).intValue()/9 instead of (Integer) t.intValue()/9
+
+garbage collection
+    can be collected if no refs point to it
+    can not invoke gc directly
+        can suggest to jvm with System.gc()
+
+enhanced for loop
+    can iterate over an array or collection but not a map
+    can not go on an infinite loop
+    can not find out current iteration while iterating
+
+.equals
+    always check if theyre of the same type or not first
+
+if
+    dangling else
+        always matches the innermost if

@@ -1,0 +1,88 @@
+Circle.this.side accesses a specific class' instance variable instead of the current class' instance variable
+
+constructor
+    can not return anything
+    must have a body
+        can not be abstract
+    modifiers
+        allowed
+            public, privtae, package/default, and protected
+        not allowed
+            static, final, synchronized, and abstract
+    default
+        provided by compiler only if class doesn't define ANY constructor explicitly
+        calls no-args constructor of superclass
+    parent constructor cannot be overridden
+    can be private
+        used for singleton classes
+    can access non-static members of class
+    if given return type
+        becomes a regular method
+    instance variables default to 0 values
+
+interface
+    functional interface
+        one abstract method
+        may have other default or static methods
+        ex.
+            interface Predicate<T> {
+                boolean test(T t);
+            }
+    cant be instantiated
+    cant implement another interface
+        extends instead
+    methods
+        public
+        can be declared default or static
+            must be implemented
+            default is always an instance method
+                can be redeclared
+                    made abstract
+                    provide different implementation
+        dont need to be implemented by classes that implement it
+    variables
+        always public, static, and final
+
+
+abstract
+    does not need an abstract method in it
+    can extend a concrete class
+    doesn't need to implement all methods of interface
+    declaration
+        methods
+            can not have method body
+                ex. {}
+            can not be static
+        must declare itself abstract
+        ex. abstract public void add() throws Exception;
+
+access
+    only one class can be public within package scope in a file
+    public < protected < package/default < private
+        private
+            no package access
+        package/default
+            package access
+            no subclass access
+        protected
+            subclass access
+            need to use the subclass to access parent class' methods
+                cant access through instance of parent class
+        public
+            all access
+    final
+        class
+            cant be subclassed
+        object
+            ref is final, not object
+            internal fields can still be changed
+        
+
+inheritance
+    methods will follow object type
+    variables will follow reference type
+    parent constructor can not be overridden
+    assigning must go up the hierarchy
+
+static variables
+    automatically initialized to their "0" value

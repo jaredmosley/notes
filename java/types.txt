@@ -1,0 +1,129 @@
+local variables
+    override instance variables
+    must be initialized before use  
+        not given default values
+
+final
+    like a constant
+
+static
+    can be accessed by static and non-static methods
+        non-static can only be accessed by non-static
+
+initialization
+    local variables
+        explicitly
+    instance and static variables
+        static initialized, then instance
+        recieve default if not explicitly declared
+            primitives default to zero value
+        instance initializer
+            brackets without static keyword
+            ex. {x = 20;}
+        static initializer
+            brackets with static keyword
+            ex. static {x = 20;}
+    class variables
+        can remain uninitialized
+    type/class doesnt affect whether its initialized or not
+    multiple variables inline
+        int x = 10, y = 5;
+
+
+import
+    only java.lang imported automatically
+    package import
+        doesn't use static keyword
+            to import static field:
+                import static <package>.<classname> or <package>.<classname>.<fieldname>
+        can't have a *
+            should specificy exact package name
+
+boolean
+    can not be converted to any other types
+    can only assign true or false
+        NOT 1 or 0
+    Boolean wrapper class
+        Boolean(String) and Boolean(boolean)
+            String ignores case
+        parseBoolean
+            return boolean
+        valueOf
+            return reference to Boolean.TRUE/FALSE
+        ==
+            if one is Boolean
+                unboxed into boolean and compared
+            both are Boolean
+                refs are compared
+            ex:
+                Boolean.parseBoolean("true") == Boolean.parseBoolean("true") -> false
+                Boolean.parseBoolean("true") == Boolean.valueOf("true") -> true
+
+
+implicit narrowing
+    occurs only for byte, char, short, int
+    does not occur for long, float, or double
+
+autoboxing/unboxing
+    ex. Boolean bool = false
+
+arrays
+    String[] s1, s2;
+        both string arrays
+    String s1[], s2;
+        only s1 is an array
+    can not give initialization size and initialize in same line
+    null
+        accessing a null array gives a NullPointerException
+    size is never specified on the lhs
+        ex. int[10] myArray
+
+operands
+    || and && and :?
+        short circuit
+            & and | will not
+    *, /, %
+        same level of precedence
+    ~
+        operates only on integral types
+    !, &&, ||
+        only work on booleans
+    +
+        overloaded so that if either operator is a string it will concatenate them
+        left associative
+    +=
+        saves lhs before rhs operations
+
+char
+    short variable cant be assigned to it without explicit casting
+        short constant can be if it fits
+    promoted to int if needed
+
+Object
+    has toString method
+
+String
+    does not have an append method
+    concatenation with +
+        transforms objects into strings
+    literal strings
+        in same class and same package
+            ref to same String object
+        different classes and same package
+            ref to same String object
+        different classes and different package
+            ref to same String object
+    computed by constant expressions
+        computed at compule time and treated as literals
+    computed at run time
+        newly created and distinct
+    interning computed string
+        same as pre-existing literal with same contents
+    iterating
+        StringIndexOutOfBounds instead of ArrayIndexOutOfBounds
+
+float
+    double cant be implicitly narrowed
+        even if it is representable
+    +
+        lower typed numbers are promoted

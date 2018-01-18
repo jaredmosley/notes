@@ -1,0 +1,32 @@
+catch
+    argument
+        any class that is-a Throwable
+    same exception can not be again once handled
+    should be ordered most to least specific
+        or else less specific catches will be unreachable
+
+declarable by throws clause
+    anything that is-a Throwable
+        ex. Exception, Error, RuntimeException
+
+System.exit(0); in try will stop execution and ignore catch/finally
+
+structure
+    try {}
+    catch {} (optional)
+    fiinally {} (optional)
+    must have either catch or finally
+
+stack trace
+    System.out.println(exception)
+        exception class and message
+    exception.printStackTrace()
+        complete chain of names of methods called
+        along with line number
+
+checked vs unchecked
+    checked
+        must have a throws clause for method or be handled
+
+OutOfMemoryError
+    caused by overfilling a collection

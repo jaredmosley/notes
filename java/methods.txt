@@ -1,0 +1,35 @@
+must be called with the exact number of parameters
+can declare that it throws CHECKED exceptions
+
+static methods
+    can not be abstract
+    can only access static variables
+    ex.
+        public static int hello(int x){};
+    can not be overridden by a non-static method and vice-versa
+
+final
+    can not be overridden
+
+overriding
+    must have same signature
+        name and parameter list
+    return type
+        primitives must be the same
+        objects must be same or subclass
+    can make it MORE accessible
+    concrete subclass must override parent abstract classes' methods
+        otherwise subclass will be abstract too
+    private methods cant be overridden
+    declared exceptions can be a subset of original method
+        can also throw an instance of a subclass of declared exception
+    must both be static or non-static
+
+main method
+    signature
+        public, static, void
+        takes String[] args
+            cant be called from commandline without this
+            never  null
+                if no args then array of length 0
+    runtime exception (NOT COMPILATION ERROR) if signature is incorrect

@@ -1,0 +1,7 @@
+package statement must be the first statement
+    otherwise class is assumed to be created in a default package with no name
+
+System
+    not a package
+    class in java.lang package
+
