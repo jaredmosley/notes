@@ -1,0 +1,11 @@
+admin page flip-flopping
+clustering in bad state
+v3 on digital
+
+Switch the GTM from topology to global availability
+    giving priority to the primary datacenterGet the virtual appliance additional storage request sorted out
+Upgrade the virtual appliances to 3.02
+Fix the digital windows proxies
+    after upgradeGet the physical appliance networking request sorted out
+Upgrade the physical appliance to 3.02
+Join the physical appliace to the cluster
