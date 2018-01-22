@@ -3,15 +3,14 @@ compiler only checks final values when determining flow of control
 switch
     switch variable
         can not use
-            boolean, long, double
+            boolean, long, double, float
         can use String, byte, char, short, int, and Enum
             Byte, Character, Short, Integer also allowed
     case label
         must be assignable to switch variable
         should be COMPILE TIME CONSTANTS
         must be unique
-            default label
-            must be at the bottom if there
+        default label
             at most one
     structure
         byte b = 10;
@@ -35,6 +34,7 @@ continue
 
 --i
     done before command
+    does not affect previous occurrences of variable in equation
 i++
     done after the command
 

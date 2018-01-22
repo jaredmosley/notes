@@ -1,7 +1,10 @@
-package statement must be the first statement
-    otherwise class is assumed to be created in a default package with no name
+[ackage]
+    must be the first statement
+        otherwise class is assumed to be created in a default package with no name
+    does not use static keyword
 
 System
     not a package
     class in java.lang package
 
+a fully qualified name does not need an import statement

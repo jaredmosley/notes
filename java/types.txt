@@ -10,6 +10,9 @@ static
     can be accessed by static and non-static methods
         non-static can only be accessed by non-static
 
+wrapper classes
+    no no-args constructor
+
 initialization
     local variables
         explicitly
@@ -28,6 +31,8 @@ initialization
     type/class doesnt affect whether its initialized or not
     multiple variables inline
         int x = 10, y = 5;
+    can not be chained in declaration
+
 
 
 import
@@ -75,10 +80,24 @@ arrays
     can not give initialization size and initialize in same line
     null
         accessing a null array gives a NullPointerException
-    size is never specified on the lhs
-        ex. int[10] myArray
+        rhs is still evaluated
+    lhs
+        size is never specified on the lhs
+            ex. int[10] myArray
+        if evaluation ends then rhs is not evaluated
+            ex. error thrown
+    default values
+        0 values for primitives
+        null for objects
+    multidimensional arrays
+        must be created from left to right
+        ex.
+            good: int a[][] = new int[4][]
+            bad : int a[][] = new int[][4]
 
 operands
+    NOTE
+        byte, char, and short are promoted to AT LEAST int before mathematical ops
     || and && and :?
         short circuit
             & and | will not
@@ -88,11 +107,15 @@ operands
         operates only on integral types
     !, &&, ||
         only work on booleans
+    =
+        least precedence
     +
         overloaded so that if either operator is a string it will concatenate them
         left associative
     +=
         saves lhs before rhs operations
+    ==
+        false if pointers to differenct objects even if value of objects is same
 
 char
     short variable cant be assigned to it without explicit casting
@@ -101,6 +124,9 @@ char
 
 Object
     has toString method
+    .equals
+        symmetric, transitive, and reflexive for primitives
+        if not of the same type will return false
 
 String
     does not have an append method
@@ -127,3 +153,9 @@ float
         even if it is representable
     +
         lower typed numbers are promoted
+    f
+        included in delcaration
+            at end of number
+        not printed with number
+
+interface, classes, and enums are all types

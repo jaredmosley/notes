@@ -1,0 +1,78 @@
+michael quinn
+    cant register account for servers
+        tried on friday
+        3 servers
+    wipe them off and reregister
+    never recieved notification for registration
+        reattempt said they were already enrolled
+    stress server
+        could not identify a correctly qualified server
+            error trying to connect through ip also
+
+rob checked keystone
+    QA - ohonq001.noceast.dws.disney.com
+        does have roles 
+    stress and DR(?)
+        missing roles
+
+picking linux as os even if it is not correct
+
+kwhon??? server enrollment attempt
+    got past keystone step
+    first time seen that screen
+    appeared in keystone
+
+owhon??? server enrollment attempt
+    searching service now
+        not all servers are in service now
+        update to say "not in service now"
+    152.6.4.14
+        brought up from search
+        registered to wrong fqdn
+        did not realize it was a freefrom textbox
+            can change it themselves
+    first try gave a server timeout
+        gave a keystone error
+        needs to be wiped from keystone before re-enrollment
+        if it does not get through keystone it wont be in secureit
+    angular 2
+        not seeing roles in internet explorer
+        ERROR TypeError: Object doesn't support property or method 'includes'
+            ES6 array access
+
+kwhon007 attempt
+    same as ownhon???
+
+###friday
+    manage password on 2008 machine
+    test box for 2012
+        was not looking up name
+        qa (ralph) was going to try and replicate
+            see what is being passed to ip
+    as400
+        find workaround for terminal emulation blocked by credential injection failure
+        terminal login screens customized
+            customization settings can not be sent over
+    SSO authentication
+        failure for digital online production environment
+        not just a configuration element
+            what rob originally thought it was
+    DSA release
+        ready
+            has been for months
+    base account yes/no
+        unchangeable but there
+
+failures in access request process workflow
+    email list
+    no one is really using it yet
+        can tell by few enrolled servers
+
+host file on keystone
+    to make it fail contextually
+
+idr paris file
+    dev ops loads the file in idr
+    Art K?
+    ask sean and danielle?
+    tracy taking care of it
