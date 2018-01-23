@@ -1,6 +1,10 @@
 Circle.this.side accesses a specific class' instance variable instead of the current class' instance variable
+toString
+    all objects inherit this from Object class
+        <classname>@<hashcode>
 
 constructor
+    implicit super() at start
     can not return anything
     must have a body
         can not be abstract
@@ -23,25 +27,45 @@ constructor
 interface
     functional interface
         one abstract method
-        may have other default or static methods
-        ex.
-            interface Predicate<T> {
-                boolean test(T t);
-            }
-    cant be instantiated
-    cant implement another interface
+            may have other default or static methods
+        ex. java.util.function.Predicate
+            interface with one abstract method
+                can have other non-abstract methods
+            signature
+                public abstract boolean test(T t)
+            code example:
+                interface Predicate<T> {
+                    boolean test(T t);
+                }
+        lamdba expressions
+            basic structure
+                (parameter list) OR single_variable_without_type -> { regular lines of code with semi-colon endings } OR just_an_expression_without_semicolon
+            if no params in functional interface
+                param list of lambda implementing it must be ()
+            if only one statement in method body
+                must omit semi-colon
+            if multiline method body
+                must use brackets with semicolons after each statement
+            
+
+    can not be instantiated
+    can not implement another interface
         extends instead
     methods
-        public
+        must be public
         can be declared default or static
+            can not be both
             must be implemented
             default is always an instance method
                 can be redeclared
                     made abstract
                     provide different implementation
+        must not be final
         dont need to be implemented by classes that implement it
     variables
         always public, static, and final
+            defaults to this if not specified
+        classes implementing interface can not change interface fields
 
 
 abstract
@@ -67,22 +91,37 @@ access
         protected
             subclass access
             need to use the subclass to access parent class' methods
-                cant access through instance of parent class
+                can not access through instance of parent class
         public
             all access
     final
         class
-            cant be subclassed
+            can not be subclassed
         object
             ref is final, not object
             internal fields can still be changed
         
 
 inheritance
-    methods will follow object type
-    variables will follow reference type
-    parent constructor can not be overridden
-    assigning must go up the hierarchy
+    instance members will follow object type
+        non-static methods
+            access the object type variables from the methods
+    static members will follow reference type
+        variables and static methods
+        not overridden but rather hidden
+    parent constructor
+        can not be overridden
+        can be called with super()
+    assigning
+        must go up the type hierarchy
+    super.super
+        invalid bs
+    implementing interfaces
+        if inheriting the same method from two different interfaces
+            must implement the method in the class
 
 static variables
     automatically initialized to their "0" value
+
+there can be, at most, one public class in a file
+    file must be named after the public class if there

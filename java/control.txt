@@ -65,3 +65,5 @@ enhanced for loop
 if
     dangling else
         always matches the innermost if
+    if (false) {// unreachable code here}
+        only allowable form of unreachable code

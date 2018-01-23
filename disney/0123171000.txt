@@ -1,0 +1,72 @@
+windows servers through rdp connect
+    atos made firewall changes last night
+        matt will check
+
+pam failure on windows (2008 and 2012) targets after enrollment
+    ralph debugging
+        wip
+
+
+ibm i and as400
+    problme in test environment
+        team wip
+        blocking testing
+
+connect sso now fixed
+    sso reconfig yesterday
+
+keystone timeout recurring
+    see how long request calls are taking
+        possible timeouts (?)
+    currently investigating why it is taking so long
+    bumping up timeout to 1 minute
+        dial it down once its been figured out
+
+connect ssh to linux servers
+    workaround for today
+    resolved later
+    josey
+        getting header information but no prompt
+            disappears after short time
+        accounts are in sync
+        matt can log in
+            siadmin works fine but siuser does not(?)
+        giving her siadmin temporarily for testing
+            could log into siadmin
+            could then log into siuser
+        siuser password was out of sync
+            matt put it back into sync while josey was logging into siadmin
+
+enrollment date
+    there
+        went through enrollment api
+    not there
+        might still be enrolled
+
+go through enrolled servers
+    change so accounts arent managing their own credentials
+        cleanup is needed on early servers
+            programatically do it(?)
+
+[FEATURE] removing self-access
+    not a current item
+
+michael quinn
+    servers have wrong fqdn
+    update fqdn on servers
+    ohosp016
+        fully enrolled
+    ohosp017
+        partially enrolled
+    need to update database with new fqdn
+        updated
+    need at least IDs registered
+        only approved if backup manager approves
+        documentation says
+            only needs manager
+        [FEATURE] detailed request status
+            wip
+
+firewall fix
+    workaround from harut
+    move admins (not users) to other servers

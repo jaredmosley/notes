@@ -1,4 +1,4 @@
-[ackage]
+package
     must be the first statement
         otherwise class is assumed to be created in a default package with no name
     does not use static keyword
@@ -6,5 +6,10 @@
 System
     not a package
     class in java.lang package
+
+static fields
+    import static <package>.<classname>.<fieldname>;
+    or
+    import static <package>.<classname>.*;
 
 a fully qualified name does not need an import statement

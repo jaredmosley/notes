@@ -2,9 +2,12 @@ local variables
     override instance variables
     must be initialized before use  
         not given default values
+    can not be given access modifiers inside methods
 
 final
     like a constant
+    must be initialized before creation of class is finished
+        inline or initialization block
 
 static
     can be accessed by static and non-static methods
@@ -12,19 +15,25 @@ static
 
 wrapper classes
     no no-args constructor
+    can't instantiate with a higher type (except String)
+        must cast down to match
+        ie: short x = new Short((short)1)
 
 initialization
     local variables
         explicitly
     instance and static variables
         static initialized, then instance
+            fields only initialized if 
         recieve default if not explicitly declared
             primitives default to zero value
         instance initializer
             brackets without static keyword
+            can also initialize static variables
             ex. {x = 20;}
         static initializer
             brackets with static keyword
+            can only initialize static variables
             ex. static {x = 20;}
     class variables
         can remain uninitialized
@@ -32,6 +41,10 @@ initialization
     multiple variables inline
         int x = 10, y = 5;
     can not be chained in declaration
+    order in class
+        1. static constants, variables, and blocks
+        2. non-static constants, cariables, and blocks
+        3. constructor
 
 
 
@@ -147,6 +160,11 @@ String
         same as pre-existing literal with same contents
     iterating
         StringIndexOutOfBounds instead of ArrayIndexOutOfBounds
+    replace(char old, char new)
+        changed (ie: "string" -> "STRING")
+            returns new object
+        no change (ie: "string" -> "string")
+            returns same object
 
 float
     double cant be implicitly narrowed

@@ -1,9 +1,11 @@
 catch
     argument
         any class that is-a Throwable
-    same exception can not be again once handled
-    should be ordered most to least specific
-        or else less specific catches will be unreachable
+    same exception can not be caught again once handled
+    must be ordered most to least specific
+        otherwise more specific catches are unreachable
+    throwing an exception from a catch block will not be caught be proceeding catch blocks
+        must be handled inside the catch
 
 declarable by throws clause
     anything that is-a Throwable
@@ -27,6 +29,12 @@ stack trace
 checked vs unchecked
     checked
         must have a throws clause for method or be handled
+    unchecked
+        runtime exception
 
 OutOfMemoryError
     caused by overfilling a collection
+
+purpose
+    determine what to do in case of unexpected behaviour
+    logging of unexpected behaviour

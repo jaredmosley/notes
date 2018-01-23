@@ -1,0 +1,54 @@
+windows servers now enrolling
+    josey and ??? (matt?) to test
+
+defect scrum from last week
+    Problem
+        only had logon on left nav panel of scureit pilot
+            no request access or anything
+    cause
+        logged out
+    solution
+        log in
+
+logging into client
+    connect to servers only
+    can not request server access
+
+
+as400
+    terminal emulation not available
+        can still ssh in
+    CAPAM is implementing a solution
+
+personally assigned accounts
+    LAR (process to request them)
+        going away
+    should they be permitted?
+
+server enrollment
+    need to have all 3 accounts
+
+request string for each server enrollment request
+    should be in human-readable format?
+
+delete your own access
+    can not right now
+    bring josey in to check
+
+direct reports
+    load users button
+        see which users have access
+    bringing josey in to check
+
+half of servers needed to enroll
+    not going to be enrolled
+    might be more stringent than necessary
+
+deleting someone elses access
+    pop-up to confirm removal
+    auto-removal
+        marked inactive immediately
+        should be within 12 hours
+            idr: 4 hours
+            keystone: several times a day
+

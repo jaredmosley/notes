@@ -13,7 +13,10 @@ LocalDate, LocalDateTime, LocalTime
     contain no zone information
     private constructors
     immutable
-    use with(...) and TemporalAdjusters interface to change into new object
+    changing
+        temporal = thisAdjuster.adjustInto(temporal)
+        temporal = temporal.with(thisAdjuster)
+
 
 calendar
     ISO-8601
